@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Manrope-xs;
+  src: url(assets/fonts/Manrope-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: Manrope-l;
+  src: url(assets/fonts/Manrope-Light.ttf);
+}
+
+@font-face {
+  font-family: MerriweatherSans-Regular;
+  src: url(assets/fonts/MerriweatherSans-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+}
+
+html {
+  background-color: rgb(24, 26, 27);
+}
+
+body {
+  display: flex;
+}
+
+#cntr {
+  display: flex;
+}
+
+#background {
+  position: absolute;
+  z-index: -1;
+}
+
+::-webkit-scrollbar{
+  background-color: rgba(0, 0, 0, 0);
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 56, 56, 0.507);
+}

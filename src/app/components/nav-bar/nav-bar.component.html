@@ -1,0 +1,36 @@
+<div class="nav-bar">
+  <h1 class="borda-lateral"
+      [ngStyle]="{
+        'border-color': 'rgba('+coresCompartilhadas.corSecundaria[0]+','+coresCompartilhadas.corSecundaria[1]+','+coresCompartilhadas.corSecundaria[2]+', 0.37)',
+        'color': 'rgb('+coresCompartilhadas.corPrincipal[0]+','+coresCompartilhadas.corPrincipal[1]+','+coresCompartilhadas.corPrincipal[2]+')'
+        }"
+  >Joseff Costa</h1>
+  <p>Futuro Cientista da Computação</p>
+  <ul class="borda-lateral" 
+      [ngStyle]="{'border-color': 'rgba('+coresCompartilhadas.corSecundaria[0]+','+coresCompartilhadas.corSecundaria[1]+','+coresCompartilhadas.corSecundaria[2]+', 0.37)'}">
+    
+    <li *ngFor="let botao of navBar" 
+        [ngStyle]="{
+          'color': botao[1] ? '#ffffff3f' : 'white', 
+          'cursor': botao[1] ? 'default' : 'pointer'
+        }" 
+        (click)="alterarFoco($event)"
+        [routerLink]="botao[2]">
+      {{ botao[0] }}
+    <img 
+      (click)="alterarFoco($event)"
+      [src]="botao[3]" 
+      [alt]="botao[2]"
+      [ngStyle]="{
+        'opacity': botao[1] ? '0.2' : '1', 
+        'cursor': botao[1] ? 'default' : 'pointer'
+      }"
+    >
+  </ul>
+</div>
+
+<div class="input-buttons">
+  <input (input)="setCorPrincipal($event)" type="color" value="#EEC58E">
+  <input (input)="setCorSecundaria($event)" type="color" value="#FF7B00">
+</div>
+

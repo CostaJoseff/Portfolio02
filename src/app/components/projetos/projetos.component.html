@@ -1,0 +1,37 @@
+<h1 class="header"
+  [ngStyle]="{
+    'border-color': coresCompartilhadas.getTextoRGBSecundario(),
+    'color': coresCompartilhadas.getTextoRGBPrincipal()
+  }"
+>Abaixo alguns projetos simples que consegui desenvolver.</h1>
+<hr
+  [ngStyle]="{
+    'border-color': coresCompartilhadas.getTextoRGBSecundario()
+  }"
+>
+<div class="grid">
+  <div class="projetos">
+    <div *ngFor="let projeto of projetos" 
+          class="card"
+          [ngStyle]="{
+            'border-color': coresCompartilhadas.getTextoRGBSecundario()
+          }"
+    >
+      <h1 [ngStyle]="{
+            'color': coresCompartilhadas.getTextoRGBPrincipal()
+          }"
+      >{{ projeto.nome }}</h1>
+      <p>{{ projeto.descricao }}</p>
+      <a [href]="projeto.url" target="_blank"
+          [ngStyle]="{
+            'color': coresCompartilhadas.getTextoRGBSecundario()
+          }"
+      >Saiba Mais ></a>
+    </div>
+  </div>
+</div>
+<hr
+  [ngStyle]="{
+    'border-color': coresCompartilhadas.getTextoRGBSecundario()
+  }"
+>

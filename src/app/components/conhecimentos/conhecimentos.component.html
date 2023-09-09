@@ -1,0 +1,31 @@
+<h1 [ngStyle]="{
+      'border-color': coresCompartilhadas.getTextoRGBSecundario(),
+      'color': coresCompartilhadas.getTextoRGBPrincipal()
+    }"
+  >Conhecimentos adquiridos desde o começo do curso.</h1>
+<div class="grid"
+      [ngStyle]="{
+        'border-color': coresCompartilhadas.getTextoRGBSecundario(),
+        'color': coresCompartilhadas.getTextoRGBPrincipal()
+      }"
+    >
+  <div *ngFor="let conhecimento of conhecimentos" 
+        class="card"
+        [ngStyle]="{
+          'border-color': coresCompartilhadas.getTextoRGBSecundario(),
+        }"
+        (mouseenter)="putSombra($event)"
+        (mouseleave)="removeSombra($event)"
+        (click)="setClicado(conhecimento.nome)"
+      >
+    <img [src]=conhecimento.url alt="{{ conhecimento.nome }} logo">
+    <p class="titulo">{{ conhecimento.nome }}</p>
+  </div>
+</div>
+
+<app-conhecimentos-card 
+  class="card-descricao"
+  *ngIf="conhecimentoClicado.isOpen"
+  (click)="fechar()"
+  [ngClass]="conhecimentoClicado.isOpen ? 'fadeIn' : ''"
+></app-conhecimentos-card>

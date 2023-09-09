@@ -1,0 +1,83 @@
+.bloco {
+  margin: 50px 0px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: end;
+}
+
+.bloco > * {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+h1 {
+  margin-bottom: 40px;
+  padding-right: 20px;
+  font-family: MerriweatherSans-Regular;
+  font-size: 30px;
+}
+
+p {
+  padding-bottom: 20px;
+  font-family: Manrope-xs;
+  font-size: 18px;
+  color: white;
+  padding-left: 200px;
+}
+
+.borda-lateral {
+  border-right-width: 4px;
+  border-right-style: solid;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px){
+  p {
+    padding-left: 70px;
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .bloco {
+    margin-top: 15px;
+  }
+}

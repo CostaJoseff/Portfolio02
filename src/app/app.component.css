@@ -1,0 +1,85 @@
+.titulo-inicial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: whitesmoke;
+  font-size: 35px;
+  font-family: Manrope-l;
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 95vw;
+  height: 90vh;
+
+  max-width: 1224px;
+  max-height: 900px;
+  
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffffff23;
+  backdrop-filter: blur(25px);
+
+  display: flex;
+  animation-name: cardFadeIn;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 7s;
+}
+
+.conteudo {
+  width: 70%;
+  height: 100%;
+  overflow: auto;
+  padding-right: 60px;
+}
+
+.nav-bar {
+  /*background-color: rgba(0, 0, 0, 0.329);*/
+}
+
+#bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .conteudo {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .conteudo {
+    width: 98%;
+    padding-right: 10px;
+  }
+
+  .nav-bar {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.705) 40%, rgba(0, 0, 0, 0));
+  }
+  
+}

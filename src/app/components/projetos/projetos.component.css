@@ -1,0 +1,134 @@
+.header {
+  margin: 40px auto;
+}
+
+.grid {
+  display: flex;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  overflow: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+
+  margin: 50px 10px;
+  padding: 70px 15px;
+  
+  border-bottom-width: 2px;
+  transition-duration: 700ms;
+  cursor: default;
+  color: white;
+}
+
+.card:hover {
+  border-bottom-color: whitesmoke;
+  border-bottom-style: solid;
+  transition-duration: 700ms;
+  background-color: rgb(0, 0, 0);
+}
+
+.imagem {
+  color: transparent;
+}
+
+.borda-lateral {
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+h1 {
+  padding-bottom: 8px;
+  color: white;
+  width: 100%;
+  font-size: 27px;
+  font-family: MerriweatherSans-Regular;
+  text-align: end;
+}
+
+p {
+  border-top-color: white;
+  border-top-width: 2px;
+  padding-top: 5px;
+  font-size: 18px;
+  font-family: Manrope-xs;
+}
+
+a {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px;
+  font-style: oblique;
+}
+
+p, h1, img, a {
+  animation-name: initialFadeIn;
+  animation-duration: 900ms;
+}
+
+
+@keyframes initialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px){
+  p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+  
+  .projetos {
+    height: 420px;
+  }
+
+  .header {
+    margin: 20px auto;
+  }
+
+  .card {
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 23px;
+  }
+
+  .card {
+    padding: 40px 15px;
+  }
+
+  .projetos {
+    height: 480px;
+  }
+}
+
+@media (max-width: 425px) {
+  .projetos {
+    height: 350px;
+  }
+
+  .card {
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

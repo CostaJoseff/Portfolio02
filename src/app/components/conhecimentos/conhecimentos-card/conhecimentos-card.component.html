@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    <h1
+      [ngStyle]="{
+        'color' : coresCompartilhadas.getTextoRGBPrincipal()
+      }"
+    >{{ titulo  }}</h1>
+  </div>
+  <hr
+    [ngStyle]="{
+      'border-color' : coresCompartilhadas.getTextoRGBSecundario()
+    }"
+  >
+  <div class="conteudo">
+    <p>{{ descricao }}</p>
+  </div>
+</div>

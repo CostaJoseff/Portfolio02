@@ -1,0 +1,63 @@
+.card {
+  transition-duration: 100ms;
+  padding: 20px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff23;
+
+  height: 70%;
+  width: 70%;
+
+  background-color: black;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition-duration: 100ms;
+}
+
+.card:active {
+  transform: scale(1);
+  transition-duration: 100ms;
+}
+
+.card-header {
+  font-size: 22px;
+  font-family: MerriweatherSans-Regular;
+  text-align: center;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.conteudo {
+  font-size: 22px;
+  font-family: Manrope-xs;
+
+  padding-top: 30px;
+  overflow: auto;
+  height: 68%;
+}
+
+@media (max-width: 425px) {
+  .conteudo {
+    font-size: 15px;
+  }
+  
+  .card-header {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-header {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-header {
+    font-size: 13px;
+  }
+}

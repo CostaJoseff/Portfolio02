@@ -1,0 +1,17 @@
+#background {
+  filter: blur(2px);
+  animation-name: fadeIn;
+  animation-duration: 20s;
+}
+
+@keyframes fadeIn {
+  0% {
+    filter:blur(0);
+  } 
+  90% {
+    filter:blur(0);
+  }
+  100% {
+    filter: blur(2px);
+  }
+}
