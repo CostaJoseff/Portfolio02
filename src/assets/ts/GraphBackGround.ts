@@ -28,7 +28,16 @@ export class GraphBackGround {
     this.quantidadeDePontos = quantidadeDePontos;
     this.velocidadeDosPontos = velocidadeDosPontos;
     this.coresCompartilhadas = coresCompartilhadas;
-    this.distanciaLimite = 40;
+    if (this.altura > this.largura) {
+      this.distanciaLimite = 55;
+      this.quantidadeDePontos = this.quantidadeDePontos/(this.altura/this.largura);
+    } else if (this.largura <= 768) {
+      this.distanciaLimite = 60;
+    } else if (this.largura <= 1024) {
+      this.distanciaLimite = 65;
+    } else {
+      this.distanciaLimite = 100;
+    }
     
     this.gerarPontos();
     if (animado) {

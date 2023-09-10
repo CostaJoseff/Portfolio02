@@ -34,6 +34,7 @@ export class BgCanvaComponent {
       const canvasAntigo = document.getElementById("background") as HTMLCanvasElement; 
       const novoCanvas = document.createElement("canvas");
       novoCanvas.id = "background";
+      novoCanvas.classList.add("background");
       divArea.removeChild(canvasAntigo);
       divArea.appendChild(novoCanvas);
       this.altura = window.innerHeight;
