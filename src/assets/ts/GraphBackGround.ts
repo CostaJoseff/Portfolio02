@@ -17,6 +17,7 @@ export class GraphBackGround {
   constructor(altura: any, largura: any, quantidadeDePontos: number, velocidadeDosPontos: number, coresCompartilhadas: CompartilhamentoService, animado: boolean, tamanhoDosPontos: number = 3, espessuraDasLinhas: number = 1) {
     this.canvas = document.getElementById("background");
     this.ctx = this.canvas.getContext('2d');
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.largura = largura;
     this.altura = altura;
     this.canvas.width = this.largura;
@@ -27,7 +28,7 @@ export class GraphBackGround {
     this.quantidadeDePontos = quantidadeDePontos;
     this.velocidadeDosPontos = velocidadeDosPontos;
     this.coresCompartilhadas = coresCompartilhadas;
-    this.distanciaLimite = 100;
+    this.distanciaLimite = 40;
     
     this.gerarPontos();
     if (animado) {

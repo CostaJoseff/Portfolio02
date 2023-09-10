@@ -26,27 +26,19 @@ export class BgCanvaComponent {
   ngOnInit() {
     this.altura = window.innerHeight;
     this.largura = window.innerWidth;
-    if (this.largura <= 425 && this.largura > 325) {
-      this.quantidadeDePontos = this.quantidadeDePontos/2;
-    } else if (this.largura <= 325) {
-      this.quantidadeDePontos = this.quantidadeDePontos/4;
-    } else {
-      this.quantidadeDePontos = 350;
-    }
 
     this.bgObjet = new GraphBackGround(this.altura, this.largura, this.quantidadeDePontos, this.velocidadeDosPontos, this.coresCompartilhadas, this.animado);
     this.resizeObservable = fromEvent(window, 'resize').pipe(debounceTime(200));
     this.resizeObservable.subscribe(() => {
-      this.largura= window.innerWidth;
+      const divArea = document.getElementById("canvasArea") as HTMLDivElement;
+      const canvasAntigo = document.getElementById("background") as HTMLCanvasElement; 
+      const novoCanvas = document.createElement("canvas");
+      novoCanvas.id = "background";
+      divArea.removeChild(canvasAntigo);
+      divArea.appendChild(novoCanvas);
       this.altura = window.innerHeight;
-      if (this.largura <= 425 && this.largura > 325) {
-        this.quantidadeDePontos = this.quantidadeDePontos/2;
-      } else if (this.largura <= 325) {
-        this.quantidadeDePontos = this.quantidadeDePontos/4;
-      } else {
-        this.quantidadeDePontos = 350;
-      }
-      this.bgObjet = new GraphBackGround(this.altura, this.largura, this.quantidadeDePontos, this.velocidadeDosPontos, this.coresCompartilhadas, this.animado);
+      this.largura = window.innerWidth;
+      this.bgObjet = new GraphBackGround(window.innerHeight, window.innerWidth, this.quantidadeDePontos, this.velocidadeDosPontos, this.coresCompartilhadas, this.animado);
     });
   }
 }
