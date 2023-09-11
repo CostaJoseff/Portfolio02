@@ -1,7 +1,7 @@
 .background {
   filter: blur(2px);
   animation-name: fadeIn;
-  animation-duration: 3s;
+  animation-duration: 20s;
 }
 
 @keyframes fadeIn {
