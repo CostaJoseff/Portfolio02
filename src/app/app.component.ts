@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'Portfolio';
-  public iniciado = true;
+  public iniciado = false;
 
   public iniciar() {
     this.iniciado = true;
