@@ -12,9 +12,10 @@ export class ConhecimentosCardComponent {
   public descricao: String;
 
   constructor(public conheciClicado: ConhecimentoClicadoService
-              ,public coresCompartilhadas: CompartilhamentoService
-    ) {
+              ,public coresCompartilhadas: CompartilhamentoService) {
     this.titulo = this.conheciClicado.conhecimentoClicado;
     this.descricao = this.conheciClicado.descricao;
+    const styles = document.documentElement.style;
+    styles.setProperty('--cor-dinamica', this.coresCompartilhadas.getTextoRGBSecundario());
   }
 }

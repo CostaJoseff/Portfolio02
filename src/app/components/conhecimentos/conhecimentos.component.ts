@@ -31,13 +31,12 @@ export class ConhecimentosComponent {
   }
 
   public putSombra(tag: any) {
-    tag.target.classList.add('sombra');
     const styles = document.documentElement.style;
     styles.setProperty('--cor-dinamica', this.coresCompartilhadas.getTextoRGBSecundario());
   }
 
   public removeSombra(tag: any) {
-    tag.target.classList.remove('sombra');
+    
   }
 
   public setClicado(cardClicado: any) {

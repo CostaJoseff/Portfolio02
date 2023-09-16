@@ -34,8 +34,6 @@ export class GraphBackGround {
       this.distanciaLimite = 65;
     }
     
-    console.log(this.altura, this.largura);
-    
     this.gerarPontos();
     if (animado) {
       this.gerarAnimacao();

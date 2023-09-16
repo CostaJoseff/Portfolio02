@@ -9,11 +9,15 @@
 >Clique</h1>
 
 <div 
+  class="cardDetalhe"
+  [ngStyle]="{
+    'display' : iniciado ? 'flex' : 'none'
+  }"></div>
+<div
   class="card"
   [ngStyle]="{
     'display' : iniciado ? 'flex' : 'none'
-  }"
->
+  }">
   <app-nav-bar class="nav-bar"></app-nav-bar>
   <div class="conteudo">
     <router-outlet></router-outlet>

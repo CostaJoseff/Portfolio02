@@ -44,7 +44,7 @@ p, h1, img {
   border-width: 2px;
   border-style: solid;
   background-color: rgba(0, 0, 0, 0.463);
-  box-shadow: 0px 14px 28px var(--cor-dinamica);
+  box-shadow: 0px 20px 30px -10px var(--cor-dinamica);
 }
 
 .card > p {
