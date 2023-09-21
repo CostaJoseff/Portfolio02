@@ -15,7 +15,7 @@ export class BgCanvaComponent {
   private resizeObservable: any;
   private altura: any;
   private largura: any;
-  private quantidadeDePontos = 200;
+  private quantidadeDePontos = 350;
   private velocidadeDosPontos = 0.2;
   private animado = true;
 
